@@ -10,6 +10,10 @@ echo ""
 echo "  dotfiles"
 echo ""
 
+caution () {
+  printf "\r\033[2K  \033[00;33m!\033[0m $1\n"
+}
+
 user () {
   printf "\r  \033[0;33m?\033[0m $1 "
 }
@@ -51,8 +55,9 @@ do
 
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
-      user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-      read -n 1 action
+      caution "File already exists: `basename $source`, what do you want to do?"
+      user "  [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?:"
+      read -e -n 1 action
 
       case "$action" in
         o )
