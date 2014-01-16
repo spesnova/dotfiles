@@ -1,0 +1,6 @@
+#
+# .gitignore for dotfiles
+#
+.DS_Store
+.netrwhist
+vim/vim.symlink/bundle/*

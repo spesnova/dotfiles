@@ -1,0 +1,27 @@
+#!/bin/bash
+
+DOTFILES_DIR=$(dirname $0)
+cd ${DOTFILES_DIR}
+
+# submodule init and update for vundle
+git submodule update --init
+
+#### shimlink dotfiles
+# backup existing dotfiles
+mkdir $HOME/.backup
+test -f $HOME/.vimrc        && mv $HOME/.vimrc        $HOME/.backup/
+test -f $HOME/.bash_profile && mv $HOME/.bash_profile $HOME/.backup/
+test -f $HOME/.bashrc       && mv $HOME/.bashrc       $HOME/.backup/
+# shimlink dotfiles
+ln -s $DOTFILES_DIR/.vimrc        $HOME/.vimrc
+ln -s $DOTFILES_DIR/.vim          $HOME/.vim
+ln -s $DOTFILES_DIR/.bash_profile $HOME/.bash_profile
+ln -s $DOTFILES_DIR/.bashrc       $HOME/.bashrc
+ln -s $DOTFILES_DIR/.gitconfig    $HOME/.gitconfig
+
+# clone vim plugin (bundle)
+vim -c ':NeoBundleInstall!'
+
+# TODO automate make
+# $ cd ~/.vim/bundle/vimproc
+# $ make -f make_mac.mak

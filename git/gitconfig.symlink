@@ -1,0 +1,10 @@
+[user]
+	name = Seigo Uchida
+	email = spesnova@gmail.com
+[color]
+	ui = auto
+[core]
+  autocrlf = input
+  safecrlf = true
+[credential]
+	helper = osxkeychain
