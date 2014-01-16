@@ -46,6 +46,7 @@ cask install hipchat
 cask install dropbox
 cask install kobito
 cask install evernote
+cask install skitch
 # TODO google-japanese-input
 
 # Team
