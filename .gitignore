@@ -5,3 +5,4 @@
 .netrwhist
 vim/vim.symlink/bundle/*
 !vim/vim.symlink/bundle/neobundle.vim
+ruby/.bundle/*
