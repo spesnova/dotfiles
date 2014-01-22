@@ -110,3 +110,16 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Bundle
 alias be="Bundle exec"
+
+#
+# AWS Configuration
+#
+# Autocompletion for AWS CLI
+complete -C aws_completer aws
+
+# Load AWS Security Credentials
+if test -f ~/.aws/config
+then
+  export AWS_ACCESS_KEY=`grep -e aws_access_key_id ~/.aws/config | sed "s/aws_access_key_id=//"`
+  export AWS_SECRET_KEY=`grep -e aws_secret_access_key ~/.aws/config | sed "s/aws_secret_access_key=//"`
+fi
