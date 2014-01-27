@@ -47,6 +47,7 @@ cask install dropbox
 cask install kobito
 cask install evernote
 cask install skitch
+cask install alfred
 # TODO google-japanese-input
 
 # Team
