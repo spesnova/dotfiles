@@ -102,7 +102,7 @@ alias hubot="bin/hubot"
 
 
 # sublime text2
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias subl="/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
 ### Added by the Heroku Toolbelt

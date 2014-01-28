@@ -48,6 +48,7 @@ cask install kobito
 cask install evernote
 cask install skitch
 cask install alfred
+cask install sublime-text
 # TODO google-japanese-input
 
 # Team
