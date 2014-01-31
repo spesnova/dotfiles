@@ -49,6 +49,7 @@ cask install evernote
 cask install skitch
 cask install alfred
 cask install sublime-text
+cask install java
 # TODO google-japanese-input
 
 # Team
