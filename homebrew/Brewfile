@@ -50,6 +50,7 @@ cask install skitch
 cask install alfred
 cask install sublime-text
 cask install java
+cask install caffeine
 # TODO google-japanese-input
 
 # Team
