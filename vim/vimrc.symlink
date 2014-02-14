@@ -67,13 +67,13 @@ NeoBundle 'https://github.com/itchyny/lightline.vim.git'
 " vim-fugitive
 NeoBundle 'https://github.com/tpope/vim-fugitive.git'
 
-" js 
+" js
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
 
-" markdown 
+" markdown
 NeoBundle 'https://github.com/tpope/vim-markdown.git'
 
-" jade 
+" jade
 NeoBundle 'https://github.com/statianzo/vim-jade'
 
 " stylus
@@ -127,6 +127,7 @@ set expandtab                     " conversion tab to space
 set autoindent
 set shiftwidth=2                  " And again, related.
 set backspace=indent,eol,start    " Intuitive backspacing.
+autocmd BufWritePre * :%s/\s\+$//e "行末の空白を保存時に自動削除
 
 
 "-------------------------------------------------------------
@@ -151,7 +152,7 @@ set ignorecase                    " 検索文字列が小文字の場合は大�
 set smartcase                     " 検索文字列に大文字が含まれる場合は区別して検索
 set wrapscan                      " 検索時に最後まで行ったら最初に戻る
 set noincsearch                   " 検索文字列入力時に順次対象文字列にヒットさせない
-""set incsearch                     
+""set incsearch
 
 
 "-------------------------------------------------------------
