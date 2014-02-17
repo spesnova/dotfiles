@@ -6,8 +6,13 @@ update
 #
 # Install Homebrew Cask
 #
-tap 'phinze/cask'
+tap phinze/cask
 install brew-cask
+
+#
+# Intall Homebrew Binary
+#
+tap homebrew/binary
 
 #
 # Install Formulas
@@ -26,6 +31,7 @@ install redis
 install tree
 install jq
 install icu4c
+install docker
 
 # Team
 #install heroku-toolbelt
