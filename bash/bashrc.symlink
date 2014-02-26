@@ -35,7 +35,7 @@ test -e ${BASH_COMPLETION_SCRIPT_PATH} && . ${BASH_COMPLETION_SCRIPT_PATH}
 # load git completion
 test -e ${GIT_COMPLETION_SCRIPT_PATH}  && . ${GIT_COMPLETION_SCRIPT_PATH}
 export GIT_PS1_SHOWDIRTYSTATE=true
-# load hub completion and alias  
+# load hub completion and alias
 test -e ${HUB_COMPLETION_SCRIPT_PATH}  && . ${HUB_COMPLETION_SCRIPT_PATH} && alias git='hub'
 
 
@@ -45,7 +45,7 @@ test -e ${HUB_COMPLETION_SCRIPT_PATH}  && . ${HUB_COMPLETION_SCRIPT_PATH} && ali
 #
 # Usage:
 #   color <color_code> <string>
-# 
+#
 # Description:
 #   give color to <string>
 #
@@ -58,7 +58,7 @@ color() {
 #
 # Usage:
 #   color256 <color_code> <string>
-# 
+#
 # Description:
 #   give 256 color to <string>
 #
@@ -100,6 +100,8 @@ test ${PLATFORM} = "Darwin" && alias cdd="cd $HOME/Dropbox/work/wiki/"
 export PATH="~/work/node_modules/.bin:$PATH"
 alias hubot="bin/hubot"
 
+# Cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # sublime text2
 alias subl="/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
