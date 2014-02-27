@@ -32,6 +32,7 @@ install tree
 install jq
 install icu4c
 install docker
+install ctags
 
 # Team
 #install heroku-toolbelt
