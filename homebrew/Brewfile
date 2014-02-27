@@ -59,6 +59,7 @@ cask install java
 cask install caffeine
 cask install screenhero
 # TODO google-japanese-input
+# TODO atom
 
 # Team
 # cask install dropbox-encore
