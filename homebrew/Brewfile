@@ -59,6 +59,7 @@ cask install sublime-text
 cask install java
 cask install caffeine
 cask install screenhero
+cask install sparrow
 # TODO google-japanese-input
 # TODO atom
 
