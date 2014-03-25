@@ -67,6 +67,10 @@ NeoBundle 'https://github.com/itchyny/lightline.vim.git'
 " vim-fugitive
 NeoBundle 'https://github.com/tpope/vim-fugitive.git'
 
+" ag
+NeoBundle 'rking/ag.vim'
+
+
 " js
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
 
@@ -165,6 +169,11 @@ imap jj <esc>
 "-------------------------------------------------------------
 " unite
 "-------------------------------------------------------------
+
+"-------------------------------------------------------------
+" grep
+"-------------------------------------------------------------
+autocmd QuickfixCmdPost vimgrep copen
 
 "-------------------------------------------------------------
 " filetype
