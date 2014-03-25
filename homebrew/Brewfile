@@ -18,7 +18,7 @@ tap homebrew/binary
 # Install Formulas
 #
 install git
-install hub
+install hub             || brew upgrade hub
 install bash-completion
 install vim
 install ruby-build
@@ -27,12 +27,13 @@ install python
 install node
 install wget
 install sqlite
-install redis
+install redis || brew upgrade redis
 install tree
 install jq
 install icu4c
-install docker
+install docker || brew upgrade docker
 install ctags
+install ag
 
 # Team
 #install heroku-toolbelt
