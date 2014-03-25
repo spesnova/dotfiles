@@ -113,6 +113,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Bundle
 alias be="Bundle exec"
 
+# history with timestamp
+export HISTTIMEFORMAT='%Y-%m-%d %T '
+
 #
 # AWS Configuration
 #
