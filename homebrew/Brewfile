@@ -44,6 +44,8 @@ install ag
 # Install Casks
 #
 cask install iterm2
+# NOTE: Color Schemes for iTerm2
+# https://github.com/mbadolato/iTerm2-Color-Schemes
 cask install vagrant
 cask install virtualbox
 cask install bettertouchtool
