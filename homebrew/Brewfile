@@ -52,7 +52,7 @@ cask install bettertouchtool
 cask install cyberduck
 cask install dash
 cask install google-chrome
-cask install hipchat
+cask install slack
 cask install dropbox
 cask install kobito
 cask install evernote
