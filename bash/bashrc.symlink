@@ -111,7 +111,8 @@ alias subl="/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Bundle
-alias be="Bundle exec"
+alias be="bundle exec"
+alias cap="bundle exec cap"
 
 # history with timestamp
 export HISTTIMEFORMAT='%Y-%m-%d %T '
