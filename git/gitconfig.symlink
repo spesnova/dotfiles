@@ -8,3 +8,5 @@
   safecrlf = true
 [credential]
 	helper = osxkeychain
+[ghq]
+	root = ~/src
