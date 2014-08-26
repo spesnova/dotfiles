@@ -13,6 +13,7 @@ install brew-cask
 # Intall Homebrew Binary
 #
 tap homebrew/binary
+tap motemen/ghq
 
 #
 # Install Formulas
@@ -34,6 +35,7 @@ install icu4c
 install docker || brew upgrade docker
 install ctags
 install ag
+install ghq
 
 # Team
 #install heroku-toolbelt
