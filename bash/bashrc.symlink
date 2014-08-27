@@ -141,7 +141,7 @@ export GOPATH=$HOME
 #
 # cd ghq repo using peco
 #
-cd-ghq-repo-using-peco() {
+change-repo() {
  cd $(ghq list -p | peco)
 }
-alias cdr=cd-ghq-repo-using-peco
+alias cr=change-repo
