@@ -145,3 +145,8 @@ change-repo() {
  cd $(ghq list -p | peco)
 }
 alias cr=change-repo
+
+#
+# ttygif
+#
+alias ttygif=$HOME/src/github.com/icholy/ttygif/ttygif
