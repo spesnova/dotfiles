@@ -43,6 +43,14 @@ install ctags
 install ag
 install ghq
 
+# Install ttyrec, ttygif
+#   plus, you need to clone and make ttygif
+#   $ git clone https://github.com/icholy/ttygif.git
+#   $ cd ttygif
+#   $ make
+install ttyrec
+install imagemagick
+
 # Team
 #install heroku-toolbelt
 #install phantomjs
