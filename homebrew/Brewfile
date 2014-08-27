@@ -16,6 +16,12 @@ tap homebrew/binary
 tap motemen/ghq
 
 #
+# Install peco/percol
+#
+brew tap peco/peco
+brew install peco
+
+#
 # Install Formulas
 #
 install git
