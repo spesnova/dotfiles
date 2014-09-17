@@ -70,6 +70,8 @@ NeoBundle 'https://github.com/tpope/vim-fugitive.git'
 " ag
 NeoBundle 'rking/ag.vim'
 
+" go
+NeoBundle 'https://github.com/fatih/vim-go.git'
 
 " js
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
@@ -202,6 +204,9 @@ au FileType json set tabstop=2 shiftwidth=2 smartindent expandtab
 au BufRead,BufNewFile *.sass set filetype=sass fileencoding=utf-8
 au FileType sass set tabstop=2 shiftwidth=2 smartindent expandtab
 
+" go
+au BufRead,BufNewFile *.go set filetype=go fileencoding=utf-8
+au FileType go setlocal tabstop=4 shiftwidth=4 sts=4 noet
 
 "-------------------------------------------------------------
 " NERDTree
