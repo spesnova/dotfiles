@@ -137,6 +137,7 @@ export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # Go
 export GOPATH=$HOME
+export PATH="~/bin/:$PATH"
 
 #
 # cd ghq repo using peco
