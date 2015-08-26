@@ -65,7 +65,6 @@ cask install iterm2
 cask install vagrant
 cask install virtualbox
 cask install bettertouchtool
-cask install cyberduck
 cask install dash
 cask install google-chrome
 cask install slack
@@ -74,15 +73,6 @@ cask install kobito
 cask install evernote
 cask install skitch
 cask install alfred
-cask install sublime-text
 cask install java
 cask install caffeine
-cask install screenhero
-cask install sparrow
 # TODO google-japanese-input
-# TODO atom
-
-# Team
-# cask install dropbox-encore
-# cask install pgadmin3
-# TODO cask install postgres.app
