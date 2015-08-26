@@ -68,55 +68,19 @@ color256() {
 
 
 #### Prompt setting
-# prompt 256 (PS? 内で外部コマンドを埋める場合は \$(コマンド) としないといけない
 export PS1="$(color256 "75" "[")$(color256 "110" "\u")$(color256 "75" "@")$(color256 "110" "\h")$(color256 "75" ":")$(color256 "110" "\W")$(color256 "75" "][")$(color256 "110" "\$(__git_ps1 "%s")")$(color256 "75" "]")\n$(color256 "75" "$ ")"
 export PS2="$(color256 "75" "$") "
-# prompt 16 ( 256 色環境ではない場合に利用 )
-#export PS1="$(color "1;34" "[\u@\h:\W][$(parse_git_branch)]")\n$(color "1;34" ">") "
-#export PS2="$(color "1;34" ">") "
 
 # rvenv
 which rbenv > /dev/null 2>&1
 test $? -eq 0 && eval "$(rbenv init -)"
 
-
 # editor
 export EDITOR=${VIM_PATH}
-
-
-# node
-if [ -e ~/.nvm/nvm.sh ]; then
-  source ~/.nvm/nvm.sh
-  nvm use 0.8.8
-fi
-
-
-# wiki
-test ${PLATFORM} = "Darwin" && alias cdd="cd $HOME/Dropbox/work/wiki/"
-
-
-# hubot
-export PATH="~/work/node_modules/.bin:$PATH"
-alias hubot="bin/hubot"
 
 # Cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# sublime text2
-alias subl="/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Bundle
-alias be="bundle exec"
-alias cap="bundle exec cap"
-
-# history with timestamp
-export HISTTIMEFORMAT='%Y-%m-%d %T '
-
-#
 # AWS Configuration
 #
 # Autocompletion for AWS CLI
@@ -132,12 +96,11 @@ fi
 # A CA bundle to enable SSL communication with the Digital Ocean API
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
-# Docker
-export DOCKER_HOST=tcp://192.168.59.103:2375
-
 # Go
 export GOPATH=$HOME
-export PATH="~/bin/:$PATH"
+
+# GHQ
+export GHQ_ROOT=$HOME/src
 
 #
 # cd ghq repo using peco
