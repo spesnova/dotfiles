@@ -87,13 +87,13 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 complete -C aws_completer aws
 
 # Load AWS Config and Security Credentials
-if test -f ~/.aws/config
-then
-  export AWS_REGION=`grep -e region ~/.aws/config | head -n1 | sed "s/region = //"`
-  export AWS_ACCESS_KEY_ID=`grep -e aws_access_key_id ~/.aws/config | head -n1 | sed "s/aws_access_key_id = //"`
-  export AWS_SECRET_ACCESS_KEY=`grep -e aws_secret_access_key ~/.aws/config | head -n1 | sed "s/aws_secret_access_key = //"`
-fi
-export AWS_DEFAULT_PROFILE=default
+#if test -f ~/.aws/config
+#then
+#  export AWS_REGION=`grep -e region ~/.aws/config | head -n1 | sed "s/region = //"`
+#  export AWS_ACCESS_KEY_ID=`grep -e aws_access_key_id ~/.aws/config | head -n1 | sed "s/aws_access_key_id = //"`
+#  export AWS_SECRET_ACCESS_KEY=`grep -e aws_secret_access_key ~/.aws/config | head -n1 | sed "s/aws_secret_access_key = //"`
+#fi
+#export AWS_DEFAULT_PROFILE=default
 
 # A CA bundle to enable SSL communication with the Digital Ocean API
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
