@@ -100,6 +100,7 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # Go
 export GOPATH=$HOME
+export PATH=$PATH:~/bin
 
 # GHQ
 export GHQ_ROOT=$HOME/src
