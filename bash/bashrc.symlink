@@ -122,3 +122,5 @@ alias concat_osx=$HOME/src/github.com/icholy/ttygif/concat_osx.sh
 # docker tools
 alias machine=docker-machine
 alias compose=docker-compose
+
+alias be="bundle exec"
