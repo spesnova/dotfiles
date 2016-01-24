@@ -124,3 +124,6 @@ alias machine=docker-machine
 alias compose=docker-compose
 
 alias be="bundle exec"
+
+# nodebrew
+export PATH=$PATH:/Users/spesnova/.nodebrew/current/bin
