@@ -17,3 +17,5 @@
 	required = true
 [github]
   user = spesnova
+[diff]
+  compactionHeuristic = true
