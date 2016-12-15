@@ -37,9 +37,6 @@ NeoBundle 'Shougo/vimproc', {
 " colorscheme wombat256mod
 NeoBundle 'https://github.com/newzealandpaul/wombat256mod.git'
 
-" colorscheme desert256
-NeoBundle 'https://github.com/tmcw/desert256'
-
 " colorscheme zenburn
 NeoBundle 'https://github.com/jnurmine/Zenburn.git'
 
@@ -57,9 +54,6 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 
 " quickrun
 NeoBundle 'https://github.com/thinca/vim-quickrun.git'
-
-" matchit
-NeoBundle 'https://github.com/edsono/vim-matchit.git'
 
 " lightline
 NeoBundle 'https://github.com/itchyny/lightline.vim.git'
