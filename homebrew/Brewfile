@@ -1,78 +1,23 @@
-#
-# Update Homebrew
-#
-update
+cask_args appdir: '/Applications'
+tap 'caskroom/cask'
 
-#
-# Install Homebrew Cask
-#
-tap phinze/cask
-install brew-cask
+brew 'git'
+brew 'bash-completion'
+brew 'vim'
+brew 'wget'
+brew 'tree'
+brew 'jq'
+brew 'ghq'
+brew 'peco'
 
-#
-# Intall Homebrew Binary
-#
-tap homebrew/binary
-tap motemen/ghq
+cask 'google-chrome'
+cask 'iterm2'
+cask 'alfred'
+cask 'dropbox'
+cask 'bettertouchtool'
+cask '1password'
+cask 'slack'
+cask 'google-japanese-ime'
+cask 'docker'
 
-#
-# Install peco/percol
-#
-brew tap peco/peco
-brew install peco
-
-#
-# Install Formulas
-#
-install git
-install hub             || brew upgrade hub
-install bash-completion
-install vim
-install ruby-build
-install rbenv
-install python
-install node
-install wget
-install sqlite
-install redis || brew upgrade redis
-install tree
-install jq
-install icu4c
-install docker || brew upgrade docker
-install ctags
-install ag
-install ghq
-
-# Install ttyrec, ttygif
-#   plus, you need to clone and make ttygif
-#   $ git clone https://github.com/icholy/ttygif.git
-#   $ cd ttygif
-#   $ make
-install ttyrec
-install imagemagick
-
-# Team
-#install heroku-toolbelt
-#install phantomjs
-#install sqlite
-
-#
-# Install Casks
-#
-cask install iterm2
-# NOTE: Color Schemes for iTerm2
-# https://github.com/mbadolato/iTerm2-Color-Schemes
-cask install vagrant
-cask install virtualbox
-cask install bettertouchtool
-cask install dash
-cask install google-chrome
-cask install slack
-cask install dropbox
-cask install kobito
-cask install evernote
-cask install skitch
-cask install alfred
-cask install java
-cask install caffeine
-# TODO google-japanese-input
+#mas 'Quiver', id: 404458553
