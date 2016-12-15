@@ -96,7 +96,6 @@ fi
 export AWS_DEFAULT_PROFILE=default
 
 # A CA bundle to enable SSL communication with the Digital Ocean API
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # Go
 export GOPATH=$HOME
