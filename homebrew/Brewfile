@@ -19,5 +19,6 @@ cask '1password'
 cask 'slack'
 cask 'google-japanese-ime'
 cask 'docker'
+cask 'caffeine'
 
 #mas 'Quiver', id: 404458553
