@@ -21,4 +21,4 @@ cask 'google-japanese-ime'
 cask 'docker'
 cask 'caffeine'
 
-#mas 'Quiver', id: 404458553
+mas 'Quiver', id: 866773894
