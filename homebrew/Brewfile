@@ -20,5 +20,6 @@ cask 'slack'
 cask 'google-japanese-ime'
 cask 'docker'
 cask 'caffeine'
+cask 'skype'
 
 mas 'Quiver', id: 866773894
