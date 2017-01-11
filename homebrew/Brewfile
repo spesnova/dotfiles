@@ -9,6 +9,7 @@ brew 'tree'
 brew 'jq'
 brew 'ghq'
 brew 'peco'
+brew 'awscli'
 
 cask 'google-chrome'
 cask 'iterm2'
