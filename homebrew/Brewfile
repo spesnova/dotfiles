@@ -23,5 +23,6 @@ cask 'docker'
 cask 'caffeine'
 cask 'skype'
 cask 'spotify'
+cask 'skitch'
 
 mas 'Quiver', id: 866773894
