@@ -71,31 +71,8 @@ color256() {
 export PS1="$(color256 "75" "[")$(color256 "110" "\u")$(color256 "75" "@")$(color256 "110" "\h")$(color256 "75" ":")$(color256 "110" "\W")$(color256 "75" "][")$(color256 "110" "\$(__git_ps1 "%s")")$(color256 "75" "]")\n$(color256 "75" "$ ")"
 export PS2="$(color256 "75" "$") "
 
-# rvenv
-which rbenv > /dev/null 2>&1
-test $? -eq 0 && eval "$(rbenv init -)"
-
 # editor
 export EDITOR=${VIM_PATH}
-
-# Cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# AWS Configuration
-#
-# Autocompletion for AWS CLI
-complete -C aws_completer aws
-
-# Load AWS Config and Security Credentials
-if test -f ~/.aws/config
-then
-  export AWS_REGION=`grep -e region ~/.aws/config | head -n1 | sed "s/region = //"`
-  export AWS_ACCESS_KEY_ID=`grep -e aws_access_key_id ~/.aws/config | head -n1 | sed "s/aws_access_key_id = //"`
-  export AWS_SECRET_ACCESS_KEY=`grep -e aws_secret_access_key ~/.aws/config | head -n1 | sed "s/aws_secret_access_key = //"`
-fi
-export AWS_DEFAULT_PROFILE=default
-
-# A CA bundle to enable SSL communication with the Digital Ocean API
 
 # Go
 export GOPATH=$HOME
@@ -112,17 +89,5 @@ change-repo() {
 }
 alias cr=change-repo
 
-#
-# ttygif
-#
-alias ttygif=$HOME/src/github.com/icholy/ttygif/ttygif
-alias concat_osx=$HOME/src/github.com/icholy/ttygif/concat_osx.sh
-
 # docker tools
-alias machine=docker-machine
 alias compose=docker-compose
-
-alias be="bundle exec"
-
-# nodebrew
-export PATH=$PATH:/Users/spesnova/.nodebrew/current/bin
