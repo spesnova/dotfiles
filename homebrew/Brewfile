@@ -11,6 +11,7 @@ brew 'ghq'
 brew 'peco'
 brew 'awscli'
 brew 'kubernetes-helm'
+brew 'gpg'
 
 cask 'google-chrome'
 cask 'iterm2'
