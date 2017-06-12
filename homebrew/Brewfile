@@ -26,5 +26,8 @@ cask 'caffeine'
 cask 'skype'
 cask 'spotify'
 cask 'skitch'
+#cask 'inssider'
+cask 'gitbook'
+cask 'gitbook-editor'
 
 mas 'Quiver', id: 866773894
