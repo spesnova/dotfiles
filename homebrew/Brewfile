@@ -29,5 +29,7 @@ cask 'skitch'
 #cask 'inssider'
 cask 'gitbook'
 cask 'gitbook-editor'
+cask 'virtualbox'
+cask 'minikube'
 
 mas 'Quiver', id: 866773894
