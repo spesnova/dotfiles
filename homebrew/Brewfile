@@ -31,5 +31,6 @@ cask 'gitbook'
 cask 'gitbook-editor'
 cask 'virtualbox'
 cask 'minikube'
+cask 'notion'
 
 mas 'Quiver', id: 866773894
