@@ -73,38 +73,11 @@ NeoBundle 'https://github.com/pangloss/vim-javascript.git'
 " markdown
 NeoBundle 'https://github.com/tpope/vim-markdown.git'
 
-" jade
-NeoBundle 'https://github.com/statianzo/vim-jade'
-
-" stylus
-NeoBundle 'https://github.com/wavded/vim-stylus.git'
-
 " ruby
 NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 
-" coffee-script
-NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
-
-" rspec (quickrun)
-"NeoBundle 'https://github.com/skwp/vim-rspec.git'
-
 " rspec & rdoc
 NeoBundle 'https://github.com/vim-scripts/Specky.git'
-
-" cucumber
-NeoBundle 'https://github.com/tpope/vim-cucumber.git'
-
-" Chef
-NeoBundle 'https://github.com/vim-scripts/chef.vim.git'
-
-" json
-NeoBundle 'https://github.com/helino/vim-json.git'
-
-" Haml / Sass and SCSS
-NeoBundle 'https://github.com/tpope/vim-haml.git'
-
-" Puppet DSL
-"NeoBundle 'https://github.com/rodjek/vim-puppet.git'
 
 
 "-------------------------------------------------------------
