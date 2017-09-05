@@ -33,5 +33,6 @@ cask 'virtualbox'
 cask 'minikube'
 cask 'notion'
 cask 'atom'
+cask 'google-cloud-sdk'
 
 mas 'Quiver', id: 866773894
