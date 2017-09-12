@@ -36,6 +36,6 @@ cask 'minikube'
 cask 'notion'
 cask 'atom'
 cask 'google-cloud-sdk'
-caks 'datadog-agent'
+cask 'datadog-agent'
 
 mas 'Quiver', id: 866773894
