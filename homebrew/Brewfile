@@ -14,6 +14,7 @@ brew 'kubernetes-helm'
 brew 'gpg'
 brew 'go'
 brew 'dep'
+brew 'terraform'
 
 cask 'google-chrome'
 cask 'iterm2'
