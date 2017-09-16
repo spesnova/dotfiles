@@ -38,5 +38,6 @@ cask 'notion'
 cask 'atom'
 cask 'google-cloud-sdk'
 cask 'datadog-agent'
+cask 'vagrant'
 
 mas 'Quiver', id: 866773894
