@@ -1,0 +1,45 @@
+#!/bin/bash
+# Description: Script for switching GKE cluster.
+# Usage: switch_gke_cluster
+
+PROJECT=''
+CLUSTER_NAME=''
+ZONE=''
+
+function cluster_name() {
+  for NAME in spesnova citadel-dev citadel-prod spinnacker-cluster
+  do
+    echo ${NAME};
+  done
+}
+
+CLUSTER_NAME=$(cluster_name | peco)
+
+case $CLUSTER_NAME in
+  "spesnova" )
+    PROJECT="mercari-p-spesnova"
+    ZONE="asia-northeast1-a"
+    ;;
+  "citadel-prod" )
+    PROJECT="mercari-jp-citadel-prod"
+    ZONE="asia-northeast1-b"
+    ;;
+  "citadel-dev" )
+    PROJECT="mercari-jp-citadel-dev"
+    ZONE="asia-northeast1-b"
+    ;;
+  "spinnaker-cluster" )
+    PROJECT="mercari-spinnaker"
+    ZONE="us-west1-b"
+    ;;
+  * )
+    echo "No such cluster"
+    exit 1
+esac
+
+gcloud config set project ${PROJECT}
+gcloud config set container/cluster ${CLUSTER_NAME}
+gcloud config set compute/zone ${ZONE}
+gcloud container clusters get-credentials ${CLUSTER_NAME}
+kubectl config current-context
+kubectl get nodes
