@@ -15,6 +15,7 @@ brew 'gpg'
 brew 'go'
 brew 'dep'
 brew 'terraform'
+brew 'stern'
 
 cask 'google-chrome'
 cask 'iterm2'
