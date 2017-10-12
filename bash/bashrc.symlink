@@ -93,3 +93,6 @@ alias sc=$HOME/src/github.com/spesnova/dotfiles/bin/switch_gke_cluster
 
 # docker tools
 alias compose=docker-compose
+
+# kubectl
+source <(kubectl completion bash)
