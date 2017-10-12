@@ -7,7 +7,7 @@ CLUSTER_NAME=''
 ZONE=''
 
 function cluster_name() {
-  for NAME in spesnova citadel-dev citadel-prod spinnacker-cluster
+  for NAME in spesnova citadel-dev citadel-prod spinnacker-cluster fury-panda-asia-east1 fury-panda-eu-west1 fury-panda-us-west1
   do
     echo ${NAME};
   done
@@ -30,6 +30,18 @@ case $CLUSTER_NAME in
     ;;
   "spinnaker-cluster" )
     PROJECT="mercari-spinnaker"
+    ZONE="us-west1-b"
+    ;;
+  "fury-panda-asia-east1" )
+    PROJECT="fury-panda"
+    ZONE="asia-east1-b"
+    ;;
+  "fury-panda-eu-west1" )
+    PROJECT="fury-panda"
+    ZONE="europe-west1-d"
+    ;;
+  "fury-panda-us-west1" )
+    PROJECT="fury-panda"
     ZONE="us-west1-b"
     ;;
   * )
