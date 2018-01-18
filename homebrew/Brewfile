@@ -41,5 +41,8 @@ cask 'atom'
 cask 'google-cloud-sdk'
 cask 'datadog-agent'
 cask 'amazon-chime'
+cask 'tunnelblick'
+cask 'kindle'
+cask 'zoomus'
 
 mas 'Quiver', id: 866773894
