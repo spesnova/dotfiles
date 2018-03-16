@@ -7,7 +7,7 @@ CLUSTER_NAME=''
 ZONE=''
 
 function cluster_name() {
-  for NAME in spesnova citadel-dev citadel-prod spinnacker-cluster fury-panda-asia-east1 fury-panda-eu-west1 fury-panda-us-west1 mercari-wiki-asia-east1 double double-cluster-dev airflow-cluster
+  for NAME in spesnova citadel-dev citadel-prod spinnaker-cluster fury-panda-asia-east1 fury-panda-eu-west1 fury-panda-us-west1 mercari-wiki-asia-east1 double double-cluster-dev airflow-cluster
   do
     echo ${NAME};
   done
