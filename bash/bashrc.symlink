@@ -89,7 +89,7 @@ change-repo() {
 }
 alias cr=change-repo
 
-alias sc=$HOME/src/github.com/spesnova/dotfiles/bin/switch_gke_cluster
+alias cc=$HOME/src/github.com/spesnova/dotfiles/bin/change_gke_cluster
 
 # docker tools
 alias compose=docker-compose
