@@ -82,7 +82,7 @@ export PATH=$PATH:~/bin
 export GHQ_ROOT=$HOME/src
 
 #
-# cd ghq repo using peco
+# cr (Change Repository)
 #
 change-repo() {
  cd $(ghq list -p | peco)
@@ -91,5 +91,5 @@ alias cr=change-repo
 
 alias cc=$HOME/src/github.com/spesnova/dotfiles/bin/change_gke_cluster
 
-# kubectl
+# kubectl completion
 source <(kubectl completion bash)
