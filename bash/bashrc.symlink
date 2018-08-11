@@ -66,9 +66,10 @@ color256() {
   echo -e "\[\033[38;5;$1m\]$2\[\033[m\]"
 }
 
-
-#### Prompt setting
-export PS1="$(color256 "75" "[")$(color256 "110" "\u")$(color256 "75" "@")$(color256 "110" "\h")$(color256 "75" ":")$(color256 "110" "\W")$(color256 "75" "][")$(color256 "110" "\$(__git_ps1 "%s")")$(color256 "75" "]")\n$(color256 "75" "$ ")"
+#
+# Prompt
+#
+export PS1="$(color256 "75" "[")$(color256 "110" "\u")$(color256 "75" "@")$(color256 "110" "\h")$(color256 "75" ":")$(color256 "110" "\W")$(color256 "75" "][")$(color256 "110" "\$(__git_ps1 "%s")")$(color256 "75" "]")$(color256 "75" [$'\xE2\x8E\x88 ')$(color256 "110" "\$(__k8s_ps1 "%s")")$(color256 "75" "]")\n$(color256 "75" "$ ")"
 export PS2="$(color256 "75" "$") "
 
 # editor
@@ -99,3 +100,12 @@ alias cc=change-context
 
 # kubectl completion
 source <(kubectl completion bash)
+
+#
+# k8s ps1
+#
+__k8s_ps1() {
+  local current_context=$(kubectl config current-context)
+  local current_namespace=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${current_context}\")].context.namespace}")
+  echo ${current_context}:${current_namespace}
+}
