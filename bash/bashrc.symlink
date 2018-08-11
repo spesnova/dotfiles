@@ -89,7 +89,13 @@ change-repo() {
 }
 alias cr=change-repo
 
-alias cc=$HOME/src/github.com/spesnova/dotfiles/bin/change_gke_cluster
+#
+# cc (Change Kubernetes Context)
+#
+change-context() {
+  kubectl config use-context $(kubectl config get-contexts -o=name | peco)
+}
+alias cc=change-context
 
 # kubectl completion
 source <(kubectl completion bash)
