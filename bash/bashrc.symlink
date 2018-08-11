@@ -91,8 +91,5 @@ alias cr=change-repo
 
 alias cc=$HOME/src/github.com/spesnova/dotfiles/bin/change_gke_cluster
 
-# docker tools
-alias compose=docker-compose
-
 # kubectl
 source <(kubectl completion bash)
