@@ -102,6 +102,15 @@ alias cc=change-context
 source <(kubectl completion bash)
 
 #
+# cn (Change Kubernetes Namespace)
+#
+change-namespace() {
+  local namespace=$(kubectl get namespaces -o=custom-columns=NAME:.metadata.name | grep -v NAME | peco)
+  kubectl config set-context $(kubectl config current-context) --namespace=${namespace}
+}
+alias cn=change-namespace
+
+#
 # k8s ps1
 #
 __k8s_ps1() {
