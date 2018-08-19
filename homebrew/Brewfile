@@ -46,5 +46,6 @@ cask 'amazon-chime'
 cask 'tunnelblick'
 cask 'kindle'
 cask 'zoomus'
+cask 'java'
 
 mas 'Quiver', id: 866773894
