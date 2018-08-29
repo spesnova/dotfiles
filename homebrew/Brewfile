@@ -47,5 +47,6 @@ cask 'tunnelblick'
 cask 'kindle'
 cask 'zoomus'
 cask 'java'
+cask 'grammarly'
 
 mas 'Quiver', id: 866773894
