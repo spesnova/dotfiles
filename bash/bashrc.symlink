@@ -78,7 +78,6 @@ export EDITOR=${VIM_PATH}
 # Go
 export GOPATH=$HOME
 export PATH=$PATH:~/bin
-export GO111MODULE=on
 
 # GHQ
 export GHQ_ROOT=$HOME/src
