@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
+tap 'go-swagger/go-swagger'
 
 brew 'git'
 brew 'bash-completion'
@@ -19,6 +20,7 @@ brew 'stern'
 brew 'httpstat'
 brew 'python'
 brew 'nodejs'
+brew 'go-swagger'
 
 cask 'google-chrome'
 cask 'iterm2'
