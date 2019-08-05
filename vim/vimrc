@@ -23,7 +23,7 @@ autocmd BufWritePre * :%s/\s\+$//e "行末の空白を保存時に自動削除
 "-------------------------------------------------------------
 syntax on                         " Turn on syntax highlighting.
 set t_Co=256
-colorscheme wombat256mod
+colorscheme wombat
 set number
 set title
 set showmode                      " Display the mode you're in.
