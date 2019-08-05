@@ -4,22 +4,22 @@
 
 configure_vim() {
   echo "Configuring vim..."
-  ln -s $(pwd)/vim/vimrc ~/.vimrc
-  ln -s $(pwd)/vim/vim/  ~/.vim
+  ln -sf $(pwd)/vim/vimrc ~/.vimrc
+  ln -sf $(pwd)/vim/vim/  ~/.vim
   git submodule update --init
   echo "Done"
 }
 
 configure_bash() {
   echo "Configuring bash..."
-  ln -s $(pwd)/bash/bash_profile ~/.bash_profile
-  ln -s $(pwd)/bash/bashrc       ~/.bashrc
+  ln -sf $(pwd)/bash/bash_profile ~/.bash_profile
+  ln -sf $(pwd)/bash/bashrc       ~/.bashrc
   echo "Done"
 }
 
 configure_git() {
   echo "Configuring git..."
-  ln -s $(pwd)/git/gitconfig ~/.gitconfig
+  ln -sf $(pwd)/git/gitconfig ~/.gitconfig
   echo "Done"
 }
 
