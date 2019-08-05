@@ -1,94 +1,10 @@
 "-------------------------------------------------------------
-" NeoBundle
-"-------------------------------------------------------------
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \     'windows' : 'make -f make_mingw32.mak',
-  \     'cygwin' : 'make -f make_cygwin.mak',
-  \     'mac' : 'make -f make_mac.mak',
-  \     'unix' : 'make -f make_unix.mak',
-  \    },
-  \ }
-
-
-"-------------------------------------------------------------
-" My Bundle
-"-------------------------------------------------------------
-" プラグインの管理の記述 3 種類
-"   1. original repos on github
-"     Bundle 'tpope/vim-fugitive'
-"   2. vim-scripts repos
-"     Bundle 'rails.vim'
-"   3. non github repos
-"     Bundle 'git://git.wincent.com/command-t.git'
-
-" colorscheme wombat256mod
-NeoBundle 'https://github.com/newzealandpaul/wombat256mod.git'
-
-" colorscheme zenburn
-NeoBundle 'https://github.com/jnurmine/Zenburn.git'
-
-" colorshcheme Smyck
-"NeoBundle 'https://github.com/hukl/Smyck-Color-Scheme.git'
-
-" unite
-NeoBundle 'Shougo/unite.vim'
-
-" ctrlp
-NeoBundle 'https://github.com/kien/ctrlp.vim'
-
-" nerdtree
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
-
-" quickrun
-NeoBundle 'https://github.com/thinca/vim-quickrun.git'
-
-" lightline
-NeoBundle 'https://github.com/itchyny/lightline.vim.git'
-
-" vim-fugitive
-NeoBundle 'https://github.com/tpope/vim-fugitive.git'
-
-" ag
-NeoBundle 'rking/ag.vim'
-
-" go
-NeoBundle 'https://github.com/fatih/vim-go.git'
-
-" js
-NeoBundle 'https://github.com/pangloss/vim-javascript.git'
-
-" markdown
-NeoBundle 'https://github.com/tpope/vim-markdown.git'
-
-" ruby
-NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
-
-" rspec & rdoc
-NeoBundle 'https://github.com/vim-scripts/Specky.git'
-
-
-"-------------------------------------------------------------
 " character code
 "-------------------------------------------------------------
 set termencoding=utf-8
 set encoding=utf-8
-"set encoding=japan
 set fileencoding=utf-8
-"set fileencoding=iso-2022-jp,utf-8,cp932,euc-jp
-set fileformats=unix,dos,mac      " 改行コードの自動認識
+set fileformats=unix,dos,mac
 
 
 "-------------------------------------------------------------
@@ -96,7 +12,6 @@ set fileformats=unix,dos,mac      " 改行コードの自動認識
 "-------------------------------------------------------------
 set tabstop=2                     " Global tab width.
 set expandtab                     " conversion tab to space
-"set smartindent
 set autoindent
 set shiftwidth=2                  " And again, related.
 set backspace=indent,eol,start    " Intuitive backspacing.
@@ -109,12 +24,10 @@ autocmd BufWritePre * :%s/\s\+$//e "行末の空白を保存時に自動削除
 syntax on                         " Turn on syntax highlighting.
 set t_Co=256
 colorscheme wombat256mod
-"colorschem murphy
 set number
 set title
 set showmode                      " Display the mode you're in.
 set wrap                          " Turn on line wrapping.
-"set nowrap
 set showcmd                       " コマンド情報をステータスラインに表示
 
 
@@ -125,7 +38,6 @@ set ignorecase                    " 検索文字列が小文字の場合は大�
 set smartcase                     " 検索文字列に大文字が含まれる場合は区別して検索
 set wrapscan                      " 検索時に最後まで行ったら最初に戻る
 set noincsearch                   " 検索文字列入力時に順次対象文字列にヒットさせない
-""set incsearch
 
 
 "-------------------------------------------------------------
@@ -136,63 +48,23 @@ imap jj <esc>
 
 
 "-------------------------------------------------------------
-" unite
-"-------------------------------------------------------------
-
-"-------------------------------------------------------------
-" grep
-"-------------------------------------------------------------
-autocmd QuickfixCmdPost vimgrep copen
-
-"-------------------------------------------------------------
 " filetype
 "-------------------------------------------------------------
 filetype on         " Enable filetype detction, required!
 filetype indent on  " Enable filetype-specific indenting, required!
 filetype plugin on  " Enable filetype-specific plugins, required!
 
-" js
-au BufRead,BufNewFile *.js set filetype=javascript fileencoding=utf-8
-au FileType javascript set tabstop=2 shiftwidth=2 smartindent expandtab
-
 " markdown
 au BufRead,BufNewFile *.md,*.markdown set filetype=markdown fileencoding=utf-8
 au FileType markdown set tabstop=4 shiftwidth=4 expandtab
-
-" ruby
-au BufRead,BufNewFile *.rb,*.cap set filetype=ruby fileencoding=utf-8
-au FileType ruby set tabstop=2 shiftwidth=2 smartindent expandtab
 
 " json
 au BufRead,BufNewFile *.json set filetype=json fileencoding=utf-8
 au FileType json set tabstop=2 shiftwidth=2 smartindent expandtab
 
-" sass
-au BufRead,BufNewFile *.sass set filetype=sass fileencoding=utf-8
-au FileType sass set tabstop=2 shiftwidth=2 smartindent expandtab
-
 " go
 au BufRead,BufNewFile *.go set filetype=go fileencoding=utf-8
 au FileType go setlocal tabstop=4 shiftwidth=4 sts=4 noet
-
-"-------------------------------------------------------------
-" NERDTree
-"-------------------------------------------------------------
-cmap @t NERDTree
-
-
-"-------------------------------------------------------------
-" QuickRun
-"-------------------------------------------------------------
-cmap @q QuickRun
-
-
-"-------------------------------------------------------------
-" Chef
-"-------------------------------------------------------------
-"
-cmap @c ChefFindAnySplit
-cmap @cv ChefFindAnyVSplit
 
 
 "-------------------------------------------------------------
@@ -217,14 +89,3 @@ let g:lightline = {
       \ }
 "let g:lightline.component
 "let g:Powerline_symbols = 'unicode'
-
-
-"-------------------------------------------------------------
-" Matchit
-"-------------------------------------------------------------
-let loaded_matchit = 1
-let b:match_words = 'do:end,(:),{:},[:]'
-
-
-" Installation Check
-NeoBundleCheck
