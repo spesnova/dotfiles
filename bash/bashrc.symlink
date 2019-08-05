@@ -10,20 +10,17 @@ case ${PLATFORM} in
   "Darwin" )
     BASH_COMPLETION_SCRIPT_PATH="/usr/local/etc/bash_completion"
     GIT_COMPLETION_SCRIPT_PATH="/usr/local/etc/bash_completion.d/git-completion.bash"
-    HUB_COMPLETION_SCRIPT_PATH="/usr/local/etc/bash_completion.d/hub.bash_completion.sh"
     VIM_PATH="/usr/local/bin/vim"
     export PATH=/usr/local/bin:$PATH # /usr/bin より /usr/local/bin を優先する (mac)
     ;;
   "Linux"  )
     BASH_COMPLETION_SCRIPT_PATH="/etc/bash_completion"
     GIT_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/git"
-    HUB_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/hub.bash_completion.sh"
     VIM_PATH="/usr/bin/vim"
     ;;
   *)
     BASH_COMPLETION_SCRIPT_PATH="/etc/bash_completion"
     GIT_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/git"
-    HUB_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/hub.bash_completion.sh"
     VIM_PATH="/usr/bin/vim"
     ;;
 esac
@@ -35,8 +32,6 @@ test -e ${BASH_COMPLETION_SCRIPT_PATH} && . ${BASH_COMPLETION_SCRIPT_PATH}
 # load git completion
 test -e ${GIT_COMPLETION_SCRIPT_PATH}  && . ${GIT_COMPLETION_SCRIPT_PATH}
 export GIT_PS1_SHOWDIRTYSTATE=true
-# load hub completion and alias
-test -e ${HUB_COMPLETION_SCRIPT_PATH}  && . ${HUB_COMPLETION_SCRIPT_PATH} && alias git='hub'
 
 
 #### define functions
