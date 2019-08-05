@@ -1,115 +1,61 @@
-# .bashrc
-
-#### Check platform
-# Example:
-#   ${PLATFORM} => "Darwin"
-#   ${PLATFORM} => "Linux"
-#
-PLATFORM="$(uname -s)"
-case ${PLATFORM} in
-  "Darwin" )
-    BASH_COMPLETION_SCRIPT_PATH="/usr/local/etc/bash_completion"
-    GIT_COMPLETION_SCRIPT_PATH="/usr/local/etc/bash_completion.d/git-completion.bash"
-    VIM_PATH="/usr/local/bin/vim"
-    export PATH=/usr/local/bin:$PATH # /usr/bin より /usr/local/bin を優先する (mac)
-    ;;
-  "Linux"  )
-    BASH_COMPLETION_SCRIPT_PATH="/etc/bash_completion"
-    GIT_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/git"
-    VIM_PATH="/usr/bin/vim"
-    ;;
-  *)
-    BASH_COMPLETION_SCRIPT_PATH="/etc/bash_completion"
-    GIT_COMPLETION_SCRIPT_PATH="/etc/bash_completion.d/git"
-    VIM_PATH="/usr/bin/vim"
-    ;;
-esac
-
-
-#### load bash completion scripts
-# load bash completion
-test -e ${BASH_COMPLETION_SCRIPT_PATH} && . ${BASH_COMPLETION_SCRIPT_PATH}
-# load git completion
-test -e ${GIT_COMPLETION_SCRIPT_PATH}  && . ${GIT_COMPLETION_SCRIPT_PATH}
-export GIT_PS1_SHOWDIRTYSTATE=true
-
-
-#### define functions
-#
-# color()
-#
-# Usage:
-#   color <color_code> <string>
-#
-# Description:
-#   give color to <string>
-#
-color() {
-  echo -e "\[\033[$1m\]$2\[\033[m\]"
-}
-
-#
-# color()
-#
-# Usage:
-#   color256 <color_code> <string>
-#
-# Description:
-#   give 256 color to <string>
-#
-color256() {
-  echo -e "\[\033[38;5;$1m\]$2\[\033[m\]"
-}
-
-#
-# Prompt
-#
-export PS1="$(color256 "75" "[")$(color256 "110" "\u")$(color256 "75" "@")$(color256 "110" "\h")$(color256 "75" ":")$(color256 "110" "\W")$(color256 "75" "][")$(color256 "110" "\$(__git_ps1 "%s")")$(color256 "75" "]")$(color256 "75" [$'\xE2\x8E\x88 ')$(color256 "110" "\$(__k8s_ps1 "%s")")$(color256 "75" "]")\n$(color256 "75" "$ ")"
-export PS2="$(color256 "75" "$") "
-
-# editor
-export EDITOR=${VIM_PATH}
-
-# Go
-export GOPATH=$HOME
-export PATH=$PATH:~/bin
-
-# GHQ
-export GHQ_ROOT=$HOME/src
-
-#
-# cr (Change Repository)
-#
-change-repo() {
+_change_repo() {
  cd $(ghq list -p | peco)
 }
-alias cr=change-repo
 
-#
-# cc (Change Kubernetes Context)
-#
-change-context() {
+_change_k8s_context() {
   kubectl config use-context $(kubectl config get-contexts -o=name | peco)
 }
-alias cc=change-context
 
-# kubectl completion
-source <(kubectl completion bash)
-
-#
-# cn (Change Kubernetes Namespace)
-#
-change-namespace() {
+_change_k8s_namespace() {
   local namespace=$(kubectl get namespaces -o=custom-columns=NAME:.metadata.name | grep -v NAME | peco)
   kubectl config set-context $(kubectl config current-context) --namespace=${namespace}
 }
-alias cn=change-namespace
 
+_load_bash_completions() {
+  local completions=(
+    "/usr/local/etc/bash_completion"
+    "/usr/local/etc/bash_completion.d/git-completion.bash"
+  )
+  for completion in ${completions[@]} ; do
+    test -e ${completion} && . ${completion}
+  done
+}
+
+#######################################
+# Coloring a string
 #
-# k8s ps1
+# Globals:
 #
-__k8s_ps1() {
+# Arguments:
+#   $1: Xterm Number
+#   $2: String
+#
+# Returns:
+#   Colored string
+_color() {
+  echo "\[\033[38;5;${1}m\]${2}\[\033[m\]"
+}
+
+_k8s_ps1() {
   local current_context=$(kubectl config current-context)
   local current_namespace=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${current_context}\")].context.namespace}")
   echo ${current_context}:${current_namespace}
 }
+
+main() {
+  export PS1="$(_color "75" "[")$(_color "110" "\u")$(_color "75" "@")$(_color "110" "\h")$(_color "75" ":")$(_color "110" "\W")$(_color "75" "][")$(_color "110" "\$(__git_ps1 "%s")")$(_color "75" "]")$(_color "75" [$'\xE2\x8E\x88 ')$(_color "110" "\$(_k8s_ps1 "%s")")$(_color "75" "]")\n$(_color "75" "$ ")"
+  export PS2="$(_color "75" "$") "
+  export EDITOR="/usr/local/bin/vim"
+  export PATH="/usr/local/bin:${PATH}"
+  export GOPATH="${HOME}"
+  export GHQ_ROOT="${HOME}/src"
+  export GIT_PS1_SHOWDIRTYSTATE=true
+
+  alias cr=_change_repo
+  alias cc=_change_k8s_context
+  alias cn=_change_k8s_namespace
+
+  _load_bash_completions
+}
+
+main "${@}"
