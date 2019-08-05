@@ -1,8 +1,7 @@
 # dotfiles
 
-## GETTING STARTED
-
-```bash
-$ git clone git://github.com/spesnova/dotfiles.git && cd dotfiles
+```console
+$ git clone https://github.com/spesnova/dotfiles.git && cd dotfiles
 $ script/bootstrap
+$ brew bundle --file=homebrew/Brewfile
 ```
