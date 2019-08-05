@@ -2,21 +2,23 @@
 	name = Seigo Uchida
 	email = spesnova@gmail.com
 	username = spesnova
+[github]
+	user = spesnova
 [color]
 # https://git-scm.com/docs/git-config#git-config-colorbranch
 # RGB hex, normal, black, red, green, yellow, blue, magenta, cyan, white
-  ui = auto
-  diff = auto
-  status = auto
-  branch = auto
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold # line info
-  old = red # deletions
-  new = green # additions
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
 [core]
-  autocrlf = input
-  safecrlf = true
+	autocrlf = input
+	safecrlf = true
 [credential]
 	helper = osxkeychain
 [ghq]
@@ -25,7 +27,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[github]
-  user = spesnova
 [diff]
-  compactionHeuristic = true
+	compactionHeuristic = true
