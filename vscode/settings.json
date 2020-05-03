@@ -1,4 +1,10 @@
 {
     "window.zoomLevel": 1,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ]
 }
