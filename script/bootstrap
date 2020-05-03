@@ -26,10 +26,17 @@ configure_git() {
   echo "Done"
 }
 
+configure_vscode() {
+  echo "Configuring vscode..."
+  ln -sf $(pwd)/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  echo "Done"
+}
+
 main() {
   configure_vim
   configure_bash
   configure_git
+  configure_vscode
 }
 
 main "${@}"
