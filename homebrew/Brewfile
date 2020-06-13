@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
-tap 'caskroom/cask'
+tap 'homebrew/cask-cask'
 tap 'go-swagger/go-swagger'
+tap 'weaveworks/tap'
 
 brew 'git'
 brew 'bash-completion'
@@ -22,6 +23,7 @@ brew 'python'
 brew 'nodejs'
 brew 'go-swagger'
 brew 'minikube'
+brew 'weaveworks/tap/eksctl'
 
 cask 'google-chrome'
 cask 'iterm2'
