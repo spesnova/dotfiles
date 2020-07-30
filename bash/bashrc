@@ -49,12 +49,12 @@ _k8s_ps1() {
   if [[ -e ~/.kube/config ]]; then
     local current_context=$(kubectl config current-context)
     local current_namespace=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${current_context}\")].context.namespace}")
-    echo ${current_context}:${current_namespace}
+    echo " ${current_context}:${current_namespace}"
   fi
 }
 
 main() {
-  export PS1="$(_color "75" "[")$(_color "110" "\u")$(_color "75" "@")$(_color "110" "\h")$(_color "75" ":")$(_color "110" "\W")$(_color "75" "][")$(_color "110" "\$(__git_ps1 "%s")")$(_color "75" "]")$(_color "75" [$'\xE2\x8E\x88 ')$(_color "110" "\$(_k8s_ps1 "%s")")$(_color "75" "]")\n$(_color "75" "$ ")"
+  export PS1="$(_color "75" "[")$(_color "110" "\u")$(_color "75" "@")$(_color "110" "\h")$(_color "75" ":")$(_color "110" "\W")$(_color "75" "][")$(_color "110" "\$(__git_ps1 "%s")")$(_color "75" "]")$(_color "75" [$'\xE2\x8E\x88')$(_color "110" "\$(_k8s_ps1 "%s")")$(_color "75" "]")\n$(_color "75" "$ ")"
   export PS2="$(_color "75" "$") "
   export EDITOR="/usr/local/bin/vim"
   export PATH="/usr/local/bin:${PATH}"
