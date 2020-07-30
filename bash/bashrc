@@ -12,10 +12,18 @@ _change_k8s_namespace() {
 }
 
 _load_bash_completions() {
-  local completions=(
-    "/usr/local/etc/bash_completion"
-    "/usr/local/etc/bash_completion.d/git-completion.bash"
-  )
+  case $(uname -a) in
+    Darwin*)
+      local completions=(
+        "/usr/local/etc/bash_completion"
+        "/usr/local/etc/bash_completion.d/git-completion.bash"
+      );;
+    Linux*)
+      local completions=(
+        "/etc/profile.d/bash_completion.sh"
+      );;
+  esac
+
   for completion in ${completions[@]} ; do
     test -e ${completion} && . ${completion}
   done
@@ -38,9 +46,11 @@ _color() {
 }
 
 _k8s_ps1() {
-  local current_context=$(kubectl config current-context)
-  local current_namespace=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${current_context}\")].context.namespace}")
-  echo ${current_context}:${current_namespace}
+  if [[ -e ~/.kube/config ]]; then
+    local current_context=$(kubectl config current-context)
+    local current_namespace=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${current_context}\")].context.namespace}")
+    echo ${current_context}:${current_namespace}
+  fi
 }
 
 main() {
