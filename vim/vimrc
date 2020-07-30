@@ -10,34 +10,34 @@ set fileformats=unix,dos,mac
 "-------------------------------------------------------------
 " edit
 "-------------------------------------------------------------
-set tabstop=2                     " Global tab width.
-set expandtab                     " conversion tab to space
+set tabstop=2
+set expandtab
 set autoindent
-set shiftwidth=2                  " And again, related.
-set backspace=indent,eol,start    " Intuitive backspacing.
-autocmd BufWritePre * :%s/\s\+$//e "行末の空白を保存時に自動削除
+set shiftwidth=2
+set backspace=indent,eol,start
+autocmd BufWritePre * :%s/\s\+$//e
 
 
 "-------------------------------------------------------------
 " view
 "-------------------------------------------------------------
-syntax on                         " Turn on syntax highlighting.
+syntax on
 set t_Co=256
 colorscheme wombat
 set number
 set title
-set showmode                      " Display the mode you're in.
-set wrap                          " Turn on line wrapping.
-set showcmd                       " コマンド情報をステータスラインに表示
+set showmode
+set wrap
+set showcmd
 
 
 "-------------------------------------------------------------
 " search
 "-------------------------------------------------------------
-set ignorecase                    " 検索文字列が小文字の場合は大文字小文字区別なく検索
-set smartcase                     " 検索文字列に大文字が含まれる場合は区別して検索
-set wrapscan                      " 検索時に最後まで行ったら最初に戻る
-set noincsearch                   " 検索文字列入力時に順次対象文字列にヒットさせない
+set ignorecase
+set smartcase
+set wrapscan
+set noincsearch
 
 
 "-------------------------------------------------------------
@@ -50,9 +50,9 @@ imap jj <esc>
 "-------------------------------------------------------------
 " filetype
 "-------------------------------------------------------------
-filetype on         " Enable filetype detction, required!
-filetype indent on  " Enable filetype-specific indenting, required!
-filetype plugin on  " Enable filetype-specific plugins, required!
+filetype on
+filetype indent on
+filetype plugin on
 
 " markdown
 au BufRead,BufNewFile *.md,*.markdown set filetype=markdown fileencoding=utf-8
