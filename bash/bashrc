@@ -35,13 +35,13 @@ _load_bash_completions() {
 # Globals:
 #
 # Arguments:
-#   $1: Xterm Number
+#   $1: Xterm Number (see: https://jonasjacek.github.io/colors/)
 #   $2: String
 #
 # Returns:
 #   Colored string
 #######################################
-_color() {
+_c() {
   echo "\[\033[38;5;${1}m\]${2}\[\033[m\]"
 }
 
@@ -53,9 +53,38 @@ _k8s_ps1() {
   fi
 }
 
+_ps1() {
+  # primary secondary
+  local pri=110
+  # primary color
+  local sec=75
+
+  case $(uname -a) in
+    Linux*)
+      pri=80
+      sec=37
+  esac
+
+  # [user@host:path]
+  local ps1="$(_c ${sec} '[')$(_c ${pri} "\u")$(_c ${sec} '@')$(_c ${pri} "\h")$(_c ${sec} ":")$(_c ${pri} "\W")$(_c ${sec} ']')"
+  # [user@host:path][master]
+  local ps1="${ps1}$(_c ${sec} '[')$(_c ${pri} "\$(__git_ps1 "%s")")$(_c ${sec} ']')"
+  # [user@host:path][master][]
+  #local ps1="${ps1}$(_c ${sec} [$'\xE2\x8E\x88')$(_c ${pri} "\$(_k8s_ps1 "%s")")$(_c ${sec} ']')"
+  # [user@host:path][master][]
+  # $
+  local ps1="${ps1}\n$(_c ${sec} '$ ')"
+
+  echo ${ps1}
+}
+
+_ps2() {
+  echo "$(_c "75" "$") "
+}
+
 main() {
-  export PS1="$(_color "75" "[")$(_color "110" "\u")$(_color "75" "@")$(_color "110" "\h")$(_color "75" ":")$(_color "110" "\W")$(_color "75" "][")$(_color "110" "\$(__git_ps1 "%s")")$(_color "75" "]")$(_color "75" [$'\xE2\x8E\x88')$(_color "110" "\$(_k8s_ps1 "%s")")$(_color "75" "]")\n$(_color "75" "$ ")"
-  export PS2="$(_color "75" "$") "
+  export PS1=$(_ps1)
+  export PS2=$(_ps2)
   export EDITOR="/usr/local/bin/vim"
   export PATH="/usr/local/bin:${PATH}"
   export GOPATH="${HOME}"
