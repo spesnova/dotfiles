@@ -28,7 +28,15 @@ configure_git() {
 
 configure_vscode() {
   echo "Configuring vscode..."
-  ln -sf $(pwd)/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+  case $(uname -a) in
+    Darwin*)
+      ln -sf $(pwd)/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+      ;;
+    Linux*)
+      ;;
+  esac
+
   echo "Done"
 }
 

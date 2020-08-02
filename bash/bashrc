@@ -85,7 +85,7 @@ _ps2() {
 main() {
   export PS1=$(_ps1)
   export PS2=$(_ps2)
-  export EDITOR="/usr/local/bin/vim"
+  export EDITOR="vim"
   export PATH="/usr/local/bin:${PATH}"
   export GOPATH="${HOME}"
   export GHQ_ROOT="${HOME}/src"
