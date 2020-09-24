@@ -24,6 +24,7 @@ brew 'nodejs'
 brew 'go-swagger'
 brew 'minikube'
 brew 'weaveworks/tap/eksctl'
+brew 'anki'
 
 cask 'google-chrome'
 cask 'iterm2'
