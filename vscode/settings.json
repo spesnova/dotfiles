@@ -9,5 +9,9 @@
     ],
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true
 }
