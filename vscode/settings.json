@@ -13,5 +13,6 @@
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right"
 }
