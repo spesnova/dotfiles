@@ -14,5 +14,8 @@
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "[terraform]": {
+      "editor.formatOnSave": true
+    }
 }
