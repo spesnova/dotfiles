@@ -26,25 +26,10 @@ configure_git() {
   echo "Done"
 }
 
-configure_vscode() {
-  echo "Configuring vscode..."
-
-  case $(uname -a) in
-    Darwin*)
-      ln -sf $(pwd)/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-      ;;
-    Linux*)
-      ;;
-  esac
-
-  echo "Done"
-}
-
 main() {
   configure_vim
   configure_bash
   configure_git
-  configure_vscode
 }
 
 main "${@}"
