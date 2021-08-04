@@ -54,16 +54,10 @@ _k8s_ps1() {
 }
 
 _ps1() {
-  # primary secondary
-  local pri=110
   # primary color
+  local pri=110
+  # secondary color
   local sec=75
-
-  case $(uname -a) in
-    Linux*)
-      pri=80
-      sec=37
-  esac
 
   # [user@host:path]
   local ps1="$(_c ${sec} '[')$(_c ${pri} "\u")$(_c ${sec} '@')$(_c ${pri} "\h")$(_c ${sec} ":")$(_c ${pri} "\W")$(_c ${sec} ']')"
