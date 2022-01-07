@@ -21,7 +21,7 @@ _load_bash_completions() {
     Linux*)
       local completions=(
         "/etc/profile.d/bash_completion.sh"
-        "/usr/share/bash-completion/completions/git"
+        "/etc/bash_completion.d/git-prompt"
       );;
   esac
 
