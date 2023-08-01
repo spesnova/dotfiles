@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 brew 'git'
-brew 'bash-completion'
 brew 'vim'
 brew 'wget'
 brew 'tree'
@@ -11,6 +10,7 @@ brew 'peco'
 brew 'awscli'
 brew 'gpg'
 brew 'terraform'
+brew 'starship'
 
 cask 'google-chrome'
 cask 'iterm2'
