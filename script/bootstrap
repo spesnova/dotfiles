@@ -15,7 +15,7 @@ configure_vim() {
 
 configure_zsh() {
   echo "Configuring zsh..."
-  ln -sf $(pwd)/zsh/zshrc       ~/.zshrc
+  ln -sf $(pwd)/zsh/zshrc ~/.zshrc
   echo "Done"
 }
 
