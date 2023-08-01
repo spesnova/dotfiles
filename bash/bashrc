@@ -2,15 +2,6 @@ _change_repo() {
  cd $(ghq list -p | peco)
 }
 
-_change_k8s_context() {
-  kubectl config use-context $(kubectl config get-contexts -o=name | peco)
-}
-
-_change_k8s_namespace() {
-  local namespace=$(kubectl get namespaces -o=custom-columns=NAME:.metadata.name | grep -v NAME | peco)
-  kubectl config set-context $(kubectl config current-context) --namespace=${namespace}
-}
-
 _load_bash_completions() {
   case $(uname -a) in
     Darwin*)
@@ -87,8 +78,6 @@ main() {
   export GIT_PS1_SHOWDIRTYSTATE=true
 
   alias cr=_change_repo
-  alias cc=_change_k8s_context
-  alias cn=_change_k8s_namespace
 
   _load_bash_completions
 }
