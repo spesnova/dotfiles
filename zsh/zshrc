@@ -1,0 +1,19 @@
+_change_repo() {
+ cd $(ghq list -p | peco)
+}
+
+_init_starship() {
+  eval "$(starship init zsh)"
+}
+
+main() {
+  export EDITOR="vim"
+  export PATH="${PATH}:/opt/homebrew/bin"
+  export GHQ_ROOT="${HOME}/Code"
+
+  alias cr=_change_repo
+
+  _init_starship
+}
+
+main "${@}"
