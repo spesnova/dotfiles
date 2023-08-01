@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
 # Bootstrap dotfiles
 
@@ -13,10 +13,9 @@ configure_vim() {
   echo "Done"
 }
 
-configure_bash() {
-  echo "Configuring bash..."
-  ln -sf $(pwd)/bash/bash_profile ~/.bash_profile
-  ln -sf $(pwd)/bash/bashrc       ~/.bashrc
+configure_zsh() {
+  echo "Configuring zsh..."
+  ln -sf $(pwd)/zsh/zshrc       ~/.zshrc
   echo "Done"
 }
 
@@ -28,7 +27,7 @@ configure_git() {
 
 main() {
   configure_vim
-  configure_bash
+  configure_zsh
   configure_git
 }
 
