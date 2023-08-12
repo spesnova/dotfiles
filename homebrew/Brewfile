@@ -29,5 +29,6 @@ cask 'raycast'
 cask 'sizzy'
 cask 'zoom'
 cask 'adobe-creative-cloud'
+cask 'figma'
 
 #cask 'dropbox'
