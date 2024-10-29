@@ -4,7 +4,7 @@ echo "Installing chezmoi..."
 sh -c "$(curl -fsLS get.chezmoi.io)"
 
 echo "Initializing chezmoi..."
-chezmoi init --apply https://github.com/$GITHUB_USERNAME/dotfiles.git
+chezmoi init --apply https://github.com/spesnova/dotfiles.git
 
 echo "done"
 
