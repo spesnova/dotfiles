@@ -1,0 +1,91 @@
+"-------------------------------------------------------------
+" character code
+"-------------------------------------------------------------
+set termencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileformats=unix,dos,mac
+
+
+"-------------------------------------------------------------
+" edit
+"-------------------------------------------------------------
+set tabstop=2
+set expandtab
+set autoindent
+set shiftwidth=2
+set backspace=indent,eol,start
+autocmd BufWritePre * :%s/\s\+$//e
+
+
+"-------------------------------------------------------------
+" view
+"-------------------------------------------------------------
+syntax on
+set t_Co=256
+colorscheme wombat
+set number
+set title
+set showmode
+set wrap
+set showcmd
+
+
+"-------------------------------------------------------------
+" search
+"-------------------------------------------------------------
+set ignorecase
+set smartcase
+set wrapscan
+set noincsearch
+
+
+"-------------------------------------------------------------
+" mapping
+"-------------------------------------------------------------
+nmap <Tab> <C-w>
+imap jj <esc>
+
+
+"-------------------------------------------------------------
+" filetype
+"-------------------------------------------------------------
+filetype on
+filetype indent on
+filetype plugin on
+
+" markdown
+au BufRead,BufNewFile *.md,*.markdown set filetype=markdown fileencoding=utf-8
+au FileType markdown set tabstop=4 shiftwidth=4 expandtab
+
+" json
+au BufRead,BufNewFile *.json set filetype=json fileencoding=utf-8
+au FileType json set tabstop=2 shiftwidth=2 smartindent expandtab
+
+" go
+au BufRead,BufNewFile *.go set filetype=go fileencoding=utf-8
+au FileType go setlocal tabstop=4 shiftwidth=4 sts=4 noet
+
+
+"-------------------------------------------------------------
+" Powerline
+"-------------------------------------------------------------
+set laststatus=2   " Always show the statusline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ }
+"let g:lightline.component
+"let g:Powerline_symbols = 'unicode'
