@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.osRelease.id "debian" -}}
+#!/bin/bash
+
+echo "Updating package list..."
+sudo apt update
+
+echo "Installing apt packages..."
+sudo apt-get install -y {{ $chezmoi.packages.ubuntu.apt | join " " }}
+
+{{ end -}}
