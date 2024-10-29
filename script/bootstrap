@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 echo "Installing chezmoi..."
+mkdir -p /usr/local/
+cd /usr/local/
 sh -c "$(curl -fsLS get.chezmoi.io)"
 
 echo "Initializing chezmoi..."
 chezmoi init --apply https://github.com/spesnova/dotfiles.git
-
-echo "done"
-
-main "
