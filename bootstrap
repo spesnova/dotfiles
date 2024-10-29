@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "Installing chezmoi..."
+sh -c "$(curl -fsLS get.chezmoi.io)"
+
+echo "Initializing chezmoi..."
+chezmoi init --apply https://github.com/$GITHUB_USERNAME/dotfiles.git
+
+echo "done"
+
+main "
