@@ -19,6 +19,7 @@ homebrew:
     - ghq
     - git
     - git
+    - goreleaser
     - gpg
     - jq
     - peco
