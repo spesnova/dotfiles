@@ -1,4 +1,5 @@
-function change_repo
+# Change Repo
+function cr
   cd $(ghq list -p | peco)
 end
 
