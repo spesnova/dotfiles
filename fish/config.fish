@@ -6,8 +6,6 @@ set -gx EDITOR vim
 set -gx GHQ_ROOT $HOME/ghq
 
 fish_add_path /usr/local/bin
-{{ if eq .chezmoi.os "darwin" }}
 fish_add_path /opt/homebrew/bin
-{{ end }}
 
 starship init fish | source
