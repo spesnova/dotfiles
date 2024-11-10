@@ -1,4 +1,0 @@
-[".vim/pack/plugins/start/lightline"]
-    type = "git-repo"
-    url = "https://github.com/itchyny/lightline.vim.git"
-    refreshPeriod = "168h"
