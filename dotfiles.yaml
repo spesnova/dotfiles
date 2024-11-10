@@ -14,35 +14,43 @@ git_submodules:
 
 homebrew:
   formulae:
-    - git
+    - awscli
     - fish
+    - ghq
     - git
+    - git
+    - gpg
+    - jq
+    - peco
+    - starship
+    - terraform
+    - tree
     - vim
     - wget
-    - tree
-    - jq
-    - ghq
-    - peco
-    - awscli
-    - gpg
-    - terraform
-    - starship
   casks:
-    - google-chrome
-    - iterm2
-    - bettertouchtool
     - 1password
-    - slack
-    - google-japanese-ime
+    - adobe-creative-cloud
+    - bettertouchtool
     - docker
-    - spotify
-    - skitch
+    - figma
+    - google-chrome
+    - google-japanese-ime
     - inssider
-    - notion
+    - iterm2
     - kindle
-    - visual-studio-code
+    - notion
     - raycast
     - sizzy
+    - skitch
+    - slack
+    - spotify
+    - visual-studio-code
     - zoom
-    - adobe-creative-cloud
-    - figma
+
+apt_packages:
+  - fish
+  - ghq
+  - git
+  - jq
+  - peco
+  - wget
