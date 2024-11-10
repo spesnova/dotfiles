@@ -1,0 +1,20 @@
+symlinks:
+  - src: fish/config.fish
+    dst: ~/.config/fish/config.fish
+  - src: vim/vimrc
+    dst: ~/.vimrc
+  - src: vim/vim
+    dst: ~/.vim
+  - src: git/gitconfig
+    dst: ~/.gitconfig
+
+git_submodules:
+  - path: vim/vim/pack/plugins/start/lightline
+    url: https://github.com/itchyny/lightline.vim.git
+
+homebrew:
+  formulae:
+    - git
+    - fish
+  casks:
+    - google-chrome
