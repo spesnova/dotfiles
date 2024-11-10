@@ -16,5 +16,33 @@ homebrew:
   formulae:
     - git
     - fish
+    - git
+    - vim
+    - wget
+    - tree
+    - jq
+    - ghq
+    - peco
+    - awscli
+    - gpg
+    - terraform
+    - starship
   casks:
     - google-chrome
+    - iterm2
+    - bettertouchtool
+    - 1password
+    - slack
+    - google-japanese-ime
+    - docker
+    - spotify
+    - skitch
+    - inssider
+    - notion
+    - kindle
+    - visual-studio-code
+    - raycast
+    - sizzy
+    - zoom
+    - adobe-creative-cloud
+    - figma
