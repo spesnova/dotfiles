@@ -1,3 +1,5 @@
+version: v0
+
 symlinks:
   - src: fish/config.fish
     dst: ~/.config/fish/config.fish
@@ -14,39 +16,32 @@ git_submodules:
 
 homebrew:
   formulae:
-    - awscli
     - fish
+    - gh
     - ghq
     - git
-    - git
-    - goreleaser
-    - gpg
     - jq
+    - mas
     - peco
     - starship
-    - terraform
     - tree
     - vim
     - wget
   casks:
-    - 1password
     - adobe-creative-cloud
+    - amie
     - bettertouchtool
-    - docker
-    - figma
+    - cursor
     - google-chrome
-    - google-japanese-ime
-    - inssider
     - iterm2
-    - kindle
     - notion
     - raycast
-    - sizzy
-    - skitch
-    - slack
     - spotify
-    - visual-studio-code
-    - zoom
+
+mas:
+  app_ids:
+    - 1333542190 # 1Password 7
+    - 803453959  # Slack
 
 apt_packages:
   - fish
