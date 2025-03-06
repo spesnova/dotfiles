@@ -33,6 +33,7 @@ homebrew:
     - bettertouchtool
     - chatgpt
     - cursor
+    - gather
     - google-chrome
     - iterm2
     - notion
