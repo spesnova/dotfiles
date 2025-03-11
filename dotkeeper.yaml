@@ -10,7 +10,7 @@ symlinks:
   - src: git/gitconfig
     dst: ~/.gitconfig
   - src: cursor/settings.json
-    dst: ~/Library/Application\ Support/Cursor/User/settings.json
+    dst: ~/Library/Application Support/Cursor/User/settings.json
 
 git_submodules:
   - path: vim/vim/pack/plugins/start/lightline
