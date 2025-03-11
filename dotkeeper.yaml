@@ -44,6 +44,7 @@ homebrew:
 
 mas:
   app_ids:
+    - 497799835  # Xcode
     - 1333542190 # 1Password 7
     - 803453959  # Slack
 
