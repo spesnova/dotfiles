@@ -20,6 +20,7 @@ homebrew:
     - gh
     - ghq
     - git
+    - git-secrets
     - jq
     - mas
     - peco
