@@ -34,6 +34,7 @@ homebrew:
     - bettertouchtool
     - chatgpt
     - cursor
+    - docker
     - gather
     - google-chrome
     - iterm2
