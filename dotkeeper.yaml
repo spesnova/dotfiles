@@ -50,10 +50,11 @@ mas:
     - 1333542190 # 1Password 7
     - 803453959  # Slack
 
-apt_packages:
-  - fish
-  - ghq
-  - git
-  - jq
-  - peco
-  - wget
+apt:
+  packages:
+    - fish
+    - ghq
+    - git
+    - jq
+    - peco
+    - wget
