@@ -31,6 +31,7 @@ homebrew:
     - vim
     - wget
   casks:
+    - AivisSpeech
     - adobe-creative-cloud
     - amie
     - bettertouchtool
