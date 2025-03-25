@@ -7,15 +7,20 @@
 
 ## Setup
 
-```
-$ brew tap spesnova/dotkeeper
-$ brew install dotkeeper
+```bash
+brew tap spesnova/dotkeeper
 ```
 
 ```
-# for private laptop
-$ dotkeeper apply -c dotkeeper.private.yaml
+brew install dotkeeper
+```
 
-# for work laptop
-$ dotkeeper apply -c dotkeeper.work.yaml
+for private laptop
+```bash
+dotkeeper apply -c dotkeeper.private.yaml
+```
+
+for work laptop
+```bash
+dotkeeper apply -c dotkeeper.work.yaml
 ```
