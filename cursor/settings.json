@@ -2,8 +2,13 @@
     "editor.tabSize": 2,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j","j"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "editor.multiCursorModifier": "ctrlCmd",
@@ -11,7 +16,7 @@
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
     "[terraform]": {
-      "editor.formatOnSave": true
+        "editor.formatOnSave": true
     },
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.profiles.linux": {
@@ -39,5 +44,7 @@
     "editor.fontSize": 16,
     "vim.statusBarColors.easymotioninputmode": "",
     "git.autofetch": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "redhat.telemetry.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false
 }
