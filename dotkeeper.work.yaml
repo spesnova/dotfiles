@@ -52,6 +52,7 @@ mas:
     - 497799835  # Xcode
     - 1333542190 # 1Password 7
     - 803453959  # Slack
+    - 302584613  # Kindle
 
 apt:
   packages:
