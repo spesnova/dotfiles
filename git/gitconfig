@@ -4,6 +4,8 @@
 	username = spesnova
 [github]
 	user = spesnova
+[init]
+  defaultBranch = main
 [color]
 # https://git-scm.com/docs/git-config#git-config-colorbranch
 # RGB hex, normal, black, red, green, yellow, blue, magenta, cyan, white
