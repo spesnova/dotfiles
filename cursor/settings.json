@@ -1,50 +1,66 @@
 {
+  "editor.tabSize": 2,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "breadcrumbs.enabled": true,
+  "editor.minimap.enabled": false,
+  "[terraform]": {
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "editor.accessibilityPageSize": 14,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "editor.fontSize": 16,
+  "vim.statusBarColors.easymotioninputmode": "",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "redhat.telemetry.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 60
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "remote.autoForwardPortsSource": "hybrid",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
     "editor.tabSize": 2,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "breadcrumbs.enabled": true,
-    "editor.minimap.enabled": false,
-    "[terraform]": {
-        "editor.formatOnSave": true
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
     },
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.profiles.linux": {
-        "bash": {
-            "path": "/bin/bash",
-            "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "zsh"
-        },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
-        "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
-        },
-    },
-    "editor.accessibilityPageSize": 14,
-    "workbench.colorTheme": "GitHub Dark Dimmed",
-    "editor.fontSize": 16,
-    "vim.statusBarColors.easymotioninputmode": "",
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "redhat.telemetry.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
