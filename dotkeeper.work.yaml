@@ -18,7 +18,6 @@ git_submodules:
 
 homebrew:
   formulae:
-    - expo-orbit
     - fish
     - gh
     - ghq
@@ -34,13 +33,10 @@ homebrew:
     - vim
     - wget
   casks:
-    - AivisSpeech
     - adobe-creative-cloud
     - amie
-    - android-studio
     - bettertouchtool
     - chatgpt
-    - claude
     - cursor
     - docker
     - gather

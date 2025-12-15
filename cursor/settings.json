@@ -62,5 +62,6 @@
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "chatgpt.localeOverride": "ja-JP"
 }
