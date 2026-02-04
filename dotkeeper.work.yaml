@@ -37,6 +37,7 @@ homebrew:
     - amie
     - bettertouchtool
     - chatgpt
+    - codex
     - cursor
     - docker
     - gather
