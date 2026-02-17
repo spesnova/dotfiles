@@ -32,6 +32,7 @@ homebrew:
     - tree
     - vim
     - wget
+    - oven-sh/bun/bun
   casks:
     - adobe-creative-cloud
     - amie
@@ -46,6 +47,7 @@ homebrew:
     - notion
     - raycast
     - spotify
+    - zed
 
 mas:
   app_ids:
