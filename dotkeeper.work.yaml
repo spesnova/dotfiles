@@ -11,6 +11,8 @@ symlinks:
     dst: ~/.gitconfig
   - src: cursor/settings.json
     dst: ~/Library/Application Support/Cursor/User/settings.json
+  - src: zsh/zshenv
+    dst: ~/.zshenv
 
 git_submodules:
   - path: vim/vim/pack/plugins/start/lightline
