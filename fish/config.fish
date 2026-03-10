@@ -5,14 +5,14 @@ end
 
 set -gx EDITOR vim
 set -gx GHQ_ROOT $HOME/ghq
+set -gx PNPM_HOME /Users/seigo.uchida/Library/pnpm
 
 fish_add_path /opt/homebrew/bin
 # Keep Homebrew mise binary ahead of /opt/homebrew/bin to avoid shim mismatch
 # warnings in `mise doctor` across terminal environments.
 fish_add_path --move --prepend /opt/homebrew/opt/mise/bin
 fish_add_path /usr/local/bin
+fish_add_path $PNPM_HOME
 
 starship init fish | source
 mise activate fish | source
-
-
