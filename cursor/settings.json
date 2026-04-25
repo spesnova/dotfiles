@@ -63,5 +63,7 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "chatgpt.localeOverride": "ja-JP"
+  "chatgpt.localeOverride": "ja-JP",
+  "claudeCode.preferredLocation": "panel",
+  "diffEditor.renderSideBySide": false
 }
