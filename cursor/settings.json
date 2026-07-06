@@ -35,7 +35,6 @@
     }
   },
   "editor.accessibilityPageSize": 14,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
   "editor.fontSize": 16,
   "vim.statusBarColors.easymotioninputmode": "",
   "git.autofetch": true,
@@ -65,5 +64,6 @@
   },
   "chatgpt.localeOverride": "ja-JP",
   "claudeCode.preferredLocation": "panel",
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "window.systemColorTheme": "dark"
 }
