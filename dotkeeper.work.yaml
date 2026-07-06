@@ -40,6 +40,7 @@ homebrew:
     - amie
     - bettertouchtool
     - chatgpt
+    - claude
     - codex-app
     - cursor
     - docker
