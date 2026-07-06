@@ -4,7 +4,7 @@ function cr
 end
 
 set -gx EDITOR vim
-set -gx GHQ_ROOT $HOME/ghq
+set -gx GHQ_ROOT $HOME/Projects
 set -gx PNPM_HOME /Users/seigo.uchida/Library/pnpm
 
 fish_add_path /opt/homebrew/bin
